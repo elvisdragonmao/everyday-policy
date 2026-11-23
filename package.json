@@ -1,0 +1,25 @@
+{
+	"name": "everyday-policy",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "pnpm -r run build",
+		"build:packages": "pnpm --filter \"./packages/*\" run build",
+		"crawl:dry-run": "pnpm --filter @everyday-policy/crawler... run build && pnpm --filter @everyday-policy/crawler run dry-run",
+		"dev": "pnpm run build:packages && pnpm -r --parallel run dev",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "sh -c 'if command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1; then git config core.hooksPath .githooks; fi'"
+	},
+	"devDependencies": {
+		"prettier": "^3.10.1",
+		"prettier-plugin-organize-imports": "^4.3.0",
+		"prettier-plugin-packagejson": "^3.1.0",
+		"typescript": "^6.0.3"
+	},
+	"packageManager": "pnpm@12.23.0+sha512.02da94ffaf133f46074322afe552f90d40b5f71ae259aefbccdacc5085b1d617e98d65e0131f5748b9b67445978ee5055d7d59a473f1eef0d504854fefcd5975",
+	"engines": {
+		"node": ">=24.15.0"
+	}
+}

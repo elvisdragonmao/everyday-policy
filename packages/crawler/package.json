@@ -1,0 +1,20 @@
+{
+	"name": "@everyday-policy/crawler",
+	"private": true,
+	"type": "module",
+	"exports": "./dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch --preserveWatchOutput",
+		"dry-run": "node dist/cli.js"
+	},
+	"dependencies": {
+		"@everyday-policy/contracts": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^24"
+	}
+}

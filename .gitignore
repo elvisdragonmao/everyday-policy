@@ -1,0 +1,19 @@
+# pnpm workspace and build outputs
+node_modules/
+dist/
+*.tsbuildinfo
+package-lock.json
+yarn.lock
+bun.lock
+bun.lockb
+
+# Local environment
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor and operating system
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,26 @@
+{
+	"name": "@everyday-policy/api",
+	"private": true,
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "node --watch --import tsx --env-file-if-exists=../../.env src/server.ts",
+		"start": "node dist/server.js"
+	},
+	"dependencies": {
+		"@everyday-policy/contracts": "workspace:*",
+		"@everyday-policy/crawler": "workspace:*",
+		"@fastify/static": "^10",
+		"fastify": "^5",
+		"pg": "^8",
+		"zod": "^4"
+	},
+	"devDependencies": {
+		"@types/node": "^24",
+		"@types/pg": "^8",
+		"tsx": "^4"
+	}
+}
